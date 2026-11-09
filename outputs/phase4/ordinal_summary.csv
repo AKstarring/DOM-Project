@@ -1,0 +1,4 @@
+Variable,Count,Min,P10,Q1,Median,Q3,P90,P95,Max
+Transport_Infrastructure_Quality,500,1.0,2.0,3.3,5.4,7.7,9.1,9.505,10.0
+Waste_Management_Rating,500,1.0,1.8,3.0,5.0,7.5,9.0,9.5,9.9
+Tourist_Satisfaction_Score,500,5.0,5.5,6.2,7.4,8.7,9.5,9.705,10.0

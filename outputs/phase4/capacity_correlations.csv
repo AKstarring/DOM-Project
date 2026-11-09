@@ -1,0 +1,4 @@
+Variable_X,Variable_Y,Count,Pearson_r
+Number_of_Tourists,Hotel_Occupancy_Rate,500,-0.03409607368799182
+Number_of_Tourists,Number_of_Hotels,500,0.05596902269862494
+Number_of_Hotels,Hotel_Occupancy_Rate,500,0.06289146797831177
