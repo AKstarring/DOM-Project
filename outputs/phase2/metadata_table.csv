@@ -1,0 +1,24 @@
+Variable,Description,Unit,Measurement_Scale,Data_Type,Analytical_Role,Business_Question,Pandas_dtype,Observed_Range_or_Levels,Distinct_Values,Missing
+Country,Destination country,-,Nominal,Categorical,Dimension (geography),Q1-Q4,str,20 levels,20,0
+City,Destination city,-,Nominal,Categorical,Dimension (geography),Q1-Q3,str,56 levels,56,0
+Year,Calendar year of the record,Year,Interval,Discrete numeric,Dimension (time),"Q1, Q4",int64,"2,020 to 2,024",5,0
+Month,Calendar month (1 = Jan ... 12 = Dec),Month,Ordinal,Discrete (coded),Dimension (seasonality),"Q1, Q4",int64,1 to 12,12,0
+Number_of_Tourists,Tourist arrivals in the city for the month,Persons,Ratio,Discrete numeric,Target (Phase 6),"Q1, Q3, Q4",int64,"50,887 to 199,960",500,0
+Purpose_of_Visit,Main purpose of travel,-,Nominal,Categorical,Segment,"Q2, Q4",str,"7 levels: Business, Cultural, Educational, Family Visit, Leisure, Medical, Religious",7,0
+Average_Length_of_Stay,Average nights per tourist,Nights,Ratio,Continuous,Predictor / KPI,"Q2, Q3",float64,2 to 15,130,0
+Tourist_Spending_USD,Average spend per tourist,USD,Ratio,Continuous,Predictor / KPI,Q2,float64,"501.02 to 4,983.79",500,0
+Hotel_Occupancy_Rate,Share of rooms occupied,%,Ratio,Continuous,Capacity-utilisation KPI,Q3,float64,40 to 89.8,302,0
+Number_of_Hotels,Hotels operating in the city,Count,Ratio,Discrete numeric,Capacity predictor,"Q3, Q4",int64,50 to 498,308,0
+Hotel_Rating,"Hotel star tier (Unrated, 1-5 star)",Stars,Ordinal,Categorical (ordered),Quality tier,"Q2, Q3",str,"6 levels: Unrated, 1-star, 2-star, 3-star, 4-star, 5-star",6,0
+Average_Room_Price_USD,Average nightly room rate,USD / night,Ratio,Continuous,Pricing KPI,"Q2, Q3",float64,50.57 to 499.89,499,0
+Tourism_Revenue_USD,Tourism revenue (= Tourists x Spending / 1000),USD '000 in effect,Ratio,Continuous,Economic KPI (derived),Q2,float64,"34,185.3 to 951,467",500,0
+Employment_in_Tourism,People employed in tourism,Persons,Ratio,Discrete numeric,Economic impact,"Q2, Q4",int64,"5,009 to 49,918",498,0
+Contribution_to_GDP_Percent,Tourism share of GDP,%,Ratio,Continuous,Economic KPI,Q2,float64,1.1 to 20,176,0
+Number_of_Flights,Incoming flights,Count,Ratio,Discrete numeric,Accessibility predictor,Q4,int64,"505 to 4,997",470,0
+Airport_Passenger_Traffic,Airport passengers handled,Persons,Ratio,Discrete numeric,Accessibility predictor,Q4,int64,"50,801 to 998,202",499,0
+Transport_Infrastructure_Quality,Transport quality index,Score 1-10,Ordinal,Index score,Accessibility predictor,Q4,float64,1 to 10,91,0
+Eco_Tourism_Revenue_USD,Eco-tourism revenue (5-30% of tourism revenue),USD '000 in effect,Ratio,Continuous,Sustainability KPI (derived),Q2,float64,"2,299.05 to 228,408",500,0
+Carbon_Footprint_kg,Tourism carbon emissions (100-500 kg per tourist),kg CO2,Ratio,Continuous,Sustainability KPI (derived),Supporting,float64,6.31089e+06 to 9.98505e+07,500,0
+Waste_Management_Rating,Waste-management rating,Score 1-10,Ordinal,Index score,Sustainability indicator,Supporting,float64,1 to 9.9,90,0
+Tourist_Satisfaction_Score,Average tourist satisfaction,Score 5-10,Ordinal,Index score,Experience KPI / predictor,Q4,float64,5 to 10,51,0
+Number_of_Online_Reviews,Online reviews of the destination,Count,Ratio,Discrete numeric,Popularity predictor,Q4,int64,"110 to 9,979",481,0

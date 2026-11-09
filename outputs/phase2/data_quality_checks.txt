@@ -1,0 +1,69 @@
+PHASE 2 - DATA QUALITY CHECKS
+============================================================
+Source file : data/raw/Tourism_Hospitality_Industry_Analysis.csv
+Rows        : 500
+Columns     : 23  (19 numeric, 4 categorical text)
+
+1. Completeness
+   Missing cells (blank)             : 0
+   Exact duplicate rows              : 0
+
+2. Structure / granularity
+   Countries: 20, cities: 56
+   Cities mapped to >1 country       : 0
+   Years : {'2020': 96, '2021': 86, '2022': 108, '2023': 116, '2024': 94}
+   Months: {1: 44, 2: 46, 3: 39, 4: 32, 5: 43, 6: 51, 7: 36, 8: 48, 9: 49, 10: 43, 11: 28, 12: 41}
+   Duplicate (City, Year, Month) keys: 30 keys covering 61 rows
+   -> a row is a single city-month record, not a unique panel cell; the data is an
+      unbalanced sample (56 cities x 60 months = 3,360 possible cells, only 500 rows).
+   Cities with >1 Hotel_Rating value : 56 of 56
+   -> Hotel_Rating describes the record (segment), not a fixed attribute of the city.
+
+3. Derived / dependent columns
+   max |Revenue - Tourists*Spending/1000| = 0.0050
+   -> Tourism_Revenue_USD = Number_of_Tourists x Tourist_Spending_USD / 1000 (exact, to the cent).
+      The column is therefore effectively in THOUSAND USD, not USD.
+   Eco_Tourism_Revenue / Tourism_Revenue ranges 0.050 - 0.300
+   Carbon_Footprint_kg / Number_of_Tourists ranges 100.2 - 499.9 kg
+   -> Revenue, Eco-tourism revenue and Carbon footprint are computed FROM tourist arrivals and
+      must not be used as predictors of Number_of_Tourists (target leakage).
+
+4. Logical consistency
+   Rows where Airport_Passenger_Traffic < Number_of_Tourists : 36
+   Correlation Number_of_Flights vs Airport_Passenger_Traffic: -0.025
+   -> flights and passengers are unrelated, which would not hold in real airport data.
+
+5. Distribution shape
+   Most numeric variables have skewness ~0 and excess kurtosis ~ -1.2, the signature of a
+   uniform distribution (values spread evenly between a min and a max). Only the derived
+   columns (revenue, eco revenue, carbon) are right-skewed.
+
+6. Association with the planned target (Number_of_Tourists)
+   r(Year                              ) = -0.004
+   r(Month                             ) = -0.031
+   r(Average_Length_of_Stay            ) = -0.019
+   r(Tourist_Spending_USD              ) = -0.009
+   r(Hotel_Occupancy_Rate              ) = -0.034
+   r(Number_of_Hotels                  ) = +0.056
+   r(Average_Room_Price_USD            ) = -0.009
+   r(Tourism_Revenue_USD               ) = +0.560
+   r(Employment_in_Tourism             ) = -0.070
+   r(Contribution_to_GDP_Percent       ) = +0.018
+   r(Number_of_Flights                 ) = -0.010
+   r(Airport_Passenger_Traffic         ) = -0.022
+   r(Transport_Infrastructure_Quality  ) = -0.009
+   r(Eco_Tourism_Revenue_USD           ) = +0.447
+   r(Carbon_Footprint_kg               ) = +0.636
+   r(Waste_Management_Rating           ) = -0.063
+   r(Tourist_Satisfaction_Score        ) = +0.027
+   r(Number_of_Online_Reviews          ) = -0.010
+   One-way ANOVA p-values (tourist arrivals differ across groups?):
+   Country              p = 0.673
+   City                 p = 0.625
+   Purpose_of_Visit     p = 0.541
+   Hotel_Rating         p = 0.779
+   Year                 p = 0.602
+   Month                p = 0.807
+   -> Apart from the derived columns, no variable has a meaningful linear association with
+      tourist arrivals, and arrivals do not differ significantly by country, city, purpose,
+      rating, year or month. See phase2.md section 6 for implications for Phases 4-6.

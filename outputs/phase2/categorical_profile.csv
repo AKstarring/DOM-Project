@@ -1,0 +1,90 @@
+Variable,Level,Count,Percent
+Country,Italy,33,6.6
+Country,China,33,6.6
+Country,Germany,31,6.2
+Country,South Africa,30,6.0
+Country,India,29,5.8
+Country,Canada,29,5.8
+Country,Australia,29,5.8
+Country,Egypt,28,5.6
+Country,Thailand,27,5.4
+Country,Brazil,26,5.2
+Country,United States,25,5.0
+Country,United Kingdom,24,4.8
+Country,Spain,24,4.8
+Country,Turkey,22,4.4
+Country,Greece,21,4.2
+Country,Mexico,20,4.0
+Country,Singapore,20,4.0
+Country,Japan,18,3.6
+Country,France,17,3.4
+Country,United Arab Emirates,14,2.8
+City,Luxor,16,3.2
+City,Johannesburg,16,3.2
+City,Beijing,14,2.8
+City,Cape Town,14,2.8
+City,Mumbai,13,2.6
+City,Sao Paulo,13,2.6
+City,Brisbane,13,2.6
+City,Rio de Janeiro,13,2.6
+City,Manchester,12,2.4
+City,Delhi,12,2.4
+City,Frankfurt,12,2.4
+City,Cairo,12,2.4
+City,Shanghai,12,2.4
+City,Florence,12,2.4
+City,Rome,11,2.2
+City,Istanbul,11,2.2
+City,Antalya,11,2.2
+City,Cancun,11,2.2
+City,Montreal,11,2.2
+City,Santorini,11,2.2
+City,Sentosa Island,11,2.2
+City,Phuket,11,2.2
+City,Venice,10,2.0
+City,Osaka,10,2.0
+City,Athens,10,2.0
+City,San Francisco,10,2.0
+City,Munich,10,2.0
+City,Toronto,10,2.0
+City,Dubai,9,1.8
+City,Berlin,9,1.8
+City,Bangkok,9,1.8
+City,Singapore City,9,1.8
+City,Madrid,9,1.8
+City,Barcelona,9,1.8
+City,London,9,1.8
+City,Melbourne,8,1.6
+City,Vancouver,8,1.6
+City,Sydney,8,1.6
+City,Guangzhou,7,1.4
+City,Chiang Mai,7,1.4
+City,Seville,6,1.2
+City,Tokyo,5,1.0
+City,Marseille,5,1.0
+City,Los Angeles,5,1.0
+City,Mexico City,5,1.0
+City,Abu Dhabi,5,1.0
+City,Paris,4,0.8
+City,Miami,4,0.8
+City,Nice,4,0.8
+City,Jaipur,4,0.8
+City,Puerto Vallarta,4,0.8
+City,Lyon,4,0.8
+City,Kyoto,3,0.6
+City,New York,3,0.6
+City,Las Vegas,3,0.6
+City,Edinburgh,3,0.6
+Purpose_of_Visit,Educational,80,16.0
+Purpose_of_Visit,Family Visit,80,16.0
+Purpose_of_Visit,Medical,72,14.4
+Purpose_of_Visit,Religious,71,14.2
+Purpose_of_Visit,Business,71,14.2
+Purpose_of_Visit,Cultural,64,12.8
+Purpose_of_Visit,Leisure,62,12.4
+Hotel_Rating,Unrated,82,16.4
+Hotel_Rating,1-star,84,16.8
+Hotel_Rating,2-star,73,14.6
+Hotel_Rating,3-star,83,16.6
+Hotel_Rating,4-star,87,17.4
+Hotel_Rating,5-star,91,18.2
