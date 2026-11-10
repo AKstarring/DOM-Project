@@ -1,0 +1,12 @@
+PHASE 4 SOURCE CHECKS
+Source: data/raw/Tourism_Hospitality_Industry_Analysis.csv
+SHA256: 1a1f2eaf63dd35ab57fda26b2a72d69aee9a1cc188cc639db44f1de483020676
+Rows: 500; columns: 23
+Missing cells: 0; exact duplicate rows: 0; all numeric values finite
+Time codes and percentage bounds: PASS
+Distinct city-year-month keys: 469
+Repeated city-year-month keys: 30 (retained)
+Rows in repeated keys: 61
+Revenue = arrivals * spending / 1000 within 0.011 stored units: PASS
+Raw dataset modified: No; no Phase 3 prepared input available
+Frequency bin coverage and category totals: checked by construction

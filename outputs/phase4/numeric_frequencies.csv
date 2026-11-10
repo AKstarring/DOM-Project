@@ -1,0 +1,22 @@
+Variable,Unit,Lower_Inclusive,Upper,Upper_Inclusive,Interval,Count,Percent
+Number_of_Tourists,persons,0,50000,No,"[0, 50,000)",0,0.0
+Number_of_Tourists,persons,50000,100000,No,"[50,000, 100,000)",168,33.6
+Number_of_Tourists,persons,100000,150000,No,"[100,000, 150,000)",160,32.0
+Number_of_Tourists,persons,150000,200000,Yes,"[150,000, 200,000]",172,34.4
+Tourist_Spending_USD,USD per tourist,0,1000,No,"[0, 1,000)",64,12.8
+Tourist_Spending_USD,USD per tourist,1000,2000,No,"[1,000, 2,000)",105,21.0
+Tourist_Spending_USD,USD per tourist,2000,3000,No,"[2,000, 3,000)",96,19.2
+Tourist_Spending_USD,USD per tourist,3000,4000,No,"[3,000, 4,000)",106,21.2
+Tourist_Spending_USD,USD per tourist,4000,5000,Yes,"[4,000, 5,000]",129,25.8
+Hotel_Occupancy_Rate,percent,0,40,No,"[0, 40)",0,0.0
+Hotel_Occupancy_Rate,percent,40,50,No,"[40, 50)",98,19.6
+Hotel_Occupancy_Rate,percent,50,60,No,"[50, 60)",109,21.8
+Hotel_Occupancy_Rate,percent,60,70,No,"[60, 70)",89,17.8
+Hotel_Occupancy_Rate,percent,70,80,No,"[70, 80)",100,20.0
+Hotel_Occupancy_Rate,percent,80,90,No,"[80, 90)",104,20.8
+Hotel_Occupancy_Rate,percent,90,100,Yes,"[90, 100]",0,0.0
+Tourism_Revenue_USD,thousand USD (inferred),0,200000,No,"[0, 200,000)",149,29.8
+Tourism_Revenue_USD,thousand USD (inferred),200000,400000,No,"[200,000, 400,000)",177,35.4
+Tourism_Revenue_USD,thousand USD (inferred),400000,600000,No,"[400,000, 600,000)",94,18.8
+Tourism_Revenue_USD,thousand USD (inferred),600000,800000,No,"[600,000, 800,000)",64,12.8
+Tourism_Revenue_USD,thousand USD (inferred),800000,1000000,Yes,"[800,000, 1,000,000]",16,3.2
